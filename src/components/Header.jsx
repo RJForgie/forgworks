@@ -69,7 +69,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-200 backdrop-blur">
+      <Popover.Button className="bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 backdrop-blur">
         <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
@@ -117,16 +117,16 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-zinc-900 p-8 font-mono uppercase ring-1 ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-900 p-8 font-mono uppercase ring-1 ring-slate-800"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <CloseIcon className="h-6 w-6 text-zinc-400" />
+                <CloseIcon className="h-6 w-6 text-slate-400" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-zinc-400">Navigation</h2>
+              <h2 className="text-sm font-medium text-slate-400">Navigation</h2>
             </div>
             <nav className="mt-6">
-              <ul className="-my-2 divide-y divide-zinc-100/5 text-base text-zinc-300">
+              <ul className="-my-2 divide-y divide-slate-100/5 text-base text-slate-300">
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/posts">Posts</MobileNavItem>
                 <MobileNavItem href="/uses">Uses</MobileNavItem>
@@ -160,7 +160,7 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="text-md flex font-mono font-medium uppercase text-zinc-200">
+      <ul className="text-md flex font-mono font-medium uppercase text-slate-200">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/posts">Posts</NavItem>
         <NavItem href="/uses">Uses</NavItem>
@@ -206,7 +206,7 @@ export function Header() {
             <div className="flex justify-between gap-4">
               <Link href="/" className="pointer-events-auto flex py-2 pr-3">
                 <FloppyDiscIcon className="mr-4 text-orange-400" />
-                <h2 className="text-md font-mono font-medium uppercase text-zinc-200 hover:text-orange-400">
+                <h2 className="text-md font-mono font-medium uppercase text-slate-200 hover:text-orange-400">
                   Ryan Forgie
                 </h2>
               </Link>

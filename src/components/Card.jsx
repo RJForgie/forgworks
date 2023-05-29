@@ -17,7 +17,10 @@ function ChevronRightIcon(props) {
 export function Card({ as: Component = 'div', className, children }) {
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start font-sans')}
+      className={clsx(
+        className,
+        'group relative flex flex-col items-start font-sans'
+      )}
     >
       {children}
     </Component>
@@ -27,7 +30,7 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-800/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
@@ -38,18 +41,14 @@ Card.Link = function CardLink({ children, ...props }) {
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-100">
+    <Component className="text-base font-semibold tracking-tight text-slate-100">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
 }
 
 Card.Description = function CardDescription({ children }) {
-  return (
-    <p className="relative z-10 mt-2 text-sm text-zinc-400">
-      {children}
-    </p>
-  )
+  return <p className="relative z-10 mt-2 text-sm text-slate-400">{children}</p>
 }
 
 Card.Cta = function CardCta({ children }) {
@@ -75,7 +74,7 @@ Card.Eyebrow = function CardEyebrow({
     <Component
       className={clsx(
         className,
-        'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 font-mono uppercase',
+        'relative z-10 order-first mb-3 flex items-center font-mono text-sm uppercase text-slate-400',
         decorate && 'pl-3.5'
       )}
       {...props}
@@ -85,7 +84,7 @@ Card.Eyebrow = function CardEyebrow({
           className="absolute inset-y-0 left-0 flex items-center"
           aria-hidden="true"
         >
-          <span className="h-4 w-0.5 rounded-full bg-zinc-400" />
+          <span className="h-4 w-0.5 rounded-full bg-slate-400" />
         </span>
       )}
       {children}

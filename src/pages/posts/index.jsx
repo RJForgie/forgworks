@@ -9,9 +9,7 @@ function Post({ post }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/posts/${post.slug}`}>
-          {post.title}
-        </Card.Title>
+        <Card.Title href={`/posts/${post.slug}`}>{post.title}</Card.Title>
         <Card.Eyebrow
           as="time"
           dateTime={post.date}
@@ -48,7 +46,7 @@ export default function PostsIndex({ posts }) {
         title="Short snippets and some thoughts."
         intro="A mixture of TIL-type posts mixed in with thoughts on software engineering"
       >
-        <div className="md:border-l md:pl-6 md:border-zinc-700/40">
+        <div className="md:border-l md:border-slate-700/40 md:pl-6">
           <div className="flex max-w-3xl flex-col space-y-16">
             {posts.map((post) => (
               <Post key={post.slug} post={post} />
