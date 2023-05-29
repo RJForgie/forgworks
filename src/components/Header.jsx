@@ -181,20 +181,6 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
-        {isHomePage && (
-          <>
-            <div className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]" />
-            <Container
-              className="top-0 order-last -mb-3 pt-3"
-              style={{ position: 'var(--header-position)' }}
-            >
-              <div
-                className="top-[var(--avatar-top,theme(spacing.3))] w-full"
-                style={{ position: 'var(--header-inner-position)' }}
-              ></div>
-            </Container>
-          </>
-        )}
         <div
           className="top-0 z-10 h-16 pt-6"
           style={{ position: 'var(--header-position)' }}

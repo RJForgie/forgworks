@@ -151,7 +151,7 @@ export default function Home({ posts }) {
           content="I’m Ryan, a software engineer based in Edinburgh."
         />
       </Head>
-      <Container className="mt-9">
+      <Container className="mt-24">
         <div className="max-w-2xl">
           <h1 className=" font-mono text-2xl font-bold tracking-tight text-slate-100 sm:text-5xl">
             <q cite="https://www.defprogramming.com/quotes-by/john-johnson/">

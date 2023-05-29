@@ -2,7 +2,7 @@ import { Container } from '@/components/Container'
 
 export function SimpleLayout({ title, intro, children }) {
   return (
-    <Container className="mt-16 sm:mt-32">
+    <Container className="mt-16 sm:mt-24">
       <header className="max-w-2xl">
         <h1 className="font-sans text-2xl font-bold tracking-tight text-slate-100 sm:text-5xl">
           {title}
