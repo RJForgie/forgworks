@@ -182,9 +182,7 @@ export default function Home({ posts }) {
               <Post key={post.slug} post={post} />
             ))}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Resume />
-          </div>
+          <div className="space-y-10 lg:pl-16 xl:pl-24">{/* <Resume /> */}</div>
         </div>
       </Container>
     </>
