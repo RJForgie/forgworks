@@ -1,0 +1,37 @@
+import { PostLayout } from '@/components/PostLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Ryan Forgie',
+  date: '2023-05-29',
+  title: 'Think before your start',
+  description:
+    'An approach to problem solving and a useful tool for making it happen.',
+}
+
+export default (props) => <PostLayout meta={meta} {...props} />
+
+It's hard to slow down and think.
+
+It's easy to pick up a new task, open your editor and start writing code. Sometimes this approach pays off and I fly through the task. Other times complexity catches me out; I choose an inefficient approach, I don't see the solid and simple solution. I often get there in the end after various iterations or a self-review but I still missed the opportunity to get it on the first swing.
+
+When this happens there are two resources I always return to. Ben Kuhn's [Think Real Hard](https://www.benkuhn.net/thinkrealhard/) reflects on the joke about Richard Feynman's algorithm for problems solving:
+
+1. Write down the problem.
+2. Think real hard.
+3. Write down the solution.
+
+Kuhn makes the point that while it is a joke meant to capture Feynman's genius; there is a nugget in there for us mortals. He asserts that while there are some tricks to becoming a better programmer, most progress comes from thinking really hard.
+
+Rich Hickey's [Hammock Driven Development](https://www.youtube.com/watch?v=f84n5oFoZBc) asserts that your ability to solve difficult technical problems increases with the amount of time spent thinking about those problems.
+
+I lack a hammock in my life but I've been experimenting with building more thinking time into my task strategy. In practice, this looks like this:
+
+1. Gather the information I need: read the specification, poke around the existing code and gain context.
+2. Use the [Sit](https://sit.sonnet.io/) app to black out my laptop screen for 5 minutes. Focus and think about the problem. Start breaking the problem down into pieces.
+3. Write a first pass at a list of sub-tasks.
+4. Start the first sub-task.
+
+If you can, sub out step 2 for a walk outside or a lie down in your hammock but even just blocking distractions and thinking for 5 minutes work well.
+
+If progress slows then I repeat step 2. I find that I often get to the end of the 5 minutes and I'm ready to start the next sub-task. I also find that I'm more likely to spot a simpler solution or a more efficient approach.
