@@ -12,12 +12,12 @@ export default (props) => <PostLayout meta={meta} {...props} />
 
 Yesterday, I assisted some teammates in troubleshooting an issue where a script was executing correctly for one person but erroring for the other. To work out the problem, we ran several commands on both machines and compared the outputs (which is some cases was long). During this process, I noticed that both individuals were attempting to copy the terminal output using the mouse then pasting it into our chat.
 
-To make life easier, I recommended that they pipe the output directly to the clipboard using `pbcopy` instead. Neither were familiar with it but it's a handy command to remember. Here's an example:
+To make life easier, I recommended that they pipe the output directly to the clipboard using `pbcopy` instead. Neither were familiar with it but it's a handy command to remember if you are working on macOS. Here's an example:
 
 ```bash
-# This command will copy the output of the "ls" command to the clipboard on macOS
+# This command will copy the output of the "ls" command to the clipboard
 ls | pbcopy
-# If you want to use the contents of the clipboard in the terminal you can now use "pbpaste"
+# Use "pbpaste" to paste the contents of the clipboard if needed
 ```
 
 Next, we used the text diff tool in [DevToys](https://github.com/ObuchiYuki/DevToysMac) to compare the outputs of the two commands. We could have used the "diff" command but diffing is one of those things that seems easier to do in a GUI.
