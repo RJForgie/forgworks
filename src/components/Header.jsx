@@ -69,7 +69,7 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 backdrop-blur">
+      <Popover.Button className="bg-white text-sm font-medium text-gray-950 backdrop-blur">
         <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
@@ -117,19 +117,19 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-900 p-8 font-mono uppercase ring-1 ring-slate-800"
+            className="fixed inset-x-0 top-0 z-50 origin-top bg-gray-950 p-8 font-sans uppercase"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <CloseIcon className="h-6 w-6 text-slate-400" />
+                <CloseIcon className="h-6 w-6 text-gray-100" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-slate-400">Navigation</h2>
+              <h2 className="text-sm font-medium text-gray-100">Navigation</h2>
             </div>
             <nav className="mt-6">
-              <ul className="-my-2 divide-y divide-slate-100/5 text-base text-slate-300">
-                <MobileNavItem href="/about">About</MobileNavItem>
+              <ul className="-my-2  text-base text-gray-100">
+                {/* <MobileNavItem href="/about">About</MobileNavItem> */}
                 <MobileNavItem href="/posts">Posts</MobileNavItem>
-                <MobileNavItem href="/uses">Uses</MobileNavItem>
+                {/* <MobileNavItem href="/uses">Uses</MobileNavItem> */}
               </ul>
             </nav>
           </Popover.Panel>
@@ -147,7 +147,7 @@ function NavItem({ href, children }) {
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
+          'relative block pr-5 transition',
           isActive ? 'text-orange-400' : 'hover:text-orange-400'
         )}
       >
@@ -160,10 +160,10 @@ function NavItem({ href, children }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="text-md flex font-mono font-medium uppercase text-slate-200">
-        <NavItem href="/about">About</NavItem>
+      <ul className="text-md flex font-sans font-medium text-gray-950">
+        {/* <NavItem href="/about">About</NavItem> */}
         <NavItem href="/posts">Posts</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        {/* <NavItem href="/uses">Uses</NavItem> */}
       </ul>
     </nav>
   )
@@ -190,16 +190,16 @@ export function Header() {
             style={{ position: 'var(--header-inner-position)' }}
           >
             <div className="flex justify-between gap-4">
-              <Link href="/" className="pointer-events-auto flex py-2 pr-3">
-                <FloppyDiscIcon className="mr-4 text-orange-400" />
-                <h2 className="text-md font-mono font-medium uppercase text-slate-200 hover:text-orange-400">
-                  Ryan Forgie
-                </h2>
-              </Link>
-              <div className="flex justify-end md:flex-1">
+              <div className="flex justify-start md:flex-1">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
+              <Link href="/" className="fle group pointer-events-auto flex">
+                <h2 className="text-md font-heading font-bold uppercase text-gray-950 group-hover:text-orange-400">
+                  Ryan Forgie
+                </h2>
+                <FloppyDiscIcon className="ml-4 group-hover:text-orange-400" />
+              </Link>
             </div>
           </Container>
         </div>

@@ -1,34 +1,24 @@
 import Head from 'next/head'
 
-import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { formatDate } from '@/lib/formatDate'
 import { getAllPosts } from '@/lib/getAllPosts'
+import Link from 'next/link'
 
 function Post({ post }) {
   return (
-    <article className="md:grid md:grid-cols-4 md:items-baseline">
-      <Card className="md:col-span-3">
-        <Card.Title href={`/posts/${post.slug}`}>{post.title}</Card.Title>
-        <Card.Eyebrow
-          as="time"
-          dateTime={post.date}
-          className="md:hidden"
-          decorate
-        >
-          {formatDate(post.date)}
-        </Card.Eyebrow>
-        <Card.Description>{post.description}</Card.Description>
-        <Card.Cta>Read post</Card.Cta>
-      </Card>
-      <Card.Eyebrow
-        as="time"
-        dateTime={post.date}
-        className="mt-1 hidden md:block"
+    <Link href={`/posts/${post.slug}`}>
+      <div
+        as="article"
+        className="gap-y- flex flex-col border-b border-gray-950 pb-5 font-sans text-sm hover:text-orange-400 md:flex-row"
       >
-        {formatDate(post.date)}
-      </Card.Eyebrow>
-    </article>
+        <span className="pt-5 md:w-1/6">
+          <time dateTime={post.date}>{formatDate(post.date)}</time>
+        </span>
+        <span className="pt-5 font-bold md:w-2/6">{post.title}</span>
+        <span className="pt-5 md:w-3/6">{post.description}</span>
+      </div>
+    </Link>
   )
 }
 
@@ -37,21 +27,13 @@ export default function PostsIndex({ posts }) {
     <>
       <Head>
         <title>Posts - Ryan Forgie</title>
-        <meta
-          name="description"
-          content="A mixture of TIL-type posts mixed in "
-        />
+        <meta name="description" content="All Posts" />
       </Head>
-      <SimpleLayout
-        title="Short snippets and some thoughts."
-        intro="A mixture of TIL-type posts mixed in with thoughts on software engineering"
-      >
-        <div className="md:border-l md:border-slate-700/40 md:pl-6">
-          <div className="flex max-w-3xl flex-col space-y-16">
-            {posts.map((post) => (
-              <Post key={post.slug} post={post} />
-            ))}
-          </div>
+      <SimpleLayout title="All Posts">
+        <div className="flex flex-col">
+          {posts.map((post) => (
+            <Post key={post.slug} post={post} />
+          ))}
         </div>
       </SimpleLayout>
     </>

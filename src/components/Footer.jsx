@@ -14,17 +14,17 @@ export function Footer() {
   return (
     <footer className="mt-32">
       <Container.Outer>
-        <div className="border-t border-slate-700/40 pb-16 pt-10">
+        <div className="pb-16 pt-10">
           <Container.Inner>
-            <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-              <div className="flex gap-6 font-mono text-sm font-medium text-slate-200">
-                <NavLink href="/about">ABOUT</NavLink>
-                <NavLink href="/uses">USES</NavLink>
-              </div>
-              <p className="font-mono text-sm text-slate-400">
-                &copy; {new Date().getFullYear()} RYAN FORGIE. ALL RIGHTS
-                RESERVED.
+            <div className="flex flex-col justify-between gap-6 sm:flex-row">
+              <p className="font-sans text-sm text-gray-950">
+                &copy; {new Date().getFullYear()} Ryan Forgie. All rights
+                reserved.
               </p>
+              <div className="flex gap-6 font-sans text-sm font-medium text-gray-950">
+                {/* <NavLink href="/about">ABOUT</NavLink> */}
+                {/* <NavLink href="/uses">USES</NavLink> */}
+              </div>
             </div>
           </Container.Inner>
         </div>

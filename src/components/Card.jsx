@@ -1,19 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-function ChevronRightIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M6.75 5.75 9.25 8l-2.5 2.25"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
 export function Card({ as: Component = 'div', className, children }) {
   return (
     <Component
@@ -30,7 +17,7 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-800/50 opacity-0 transition sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-gray-950 opacity-0 transition sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
@@ -41,14 +28,14 @@ Card.Link = function CardLink({ children, ...props }) {
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
-    <Component className="text-base font-semibold tracking-tight text-slate-100 group-hover:text-orange-500">
+    <Component className="text-base font-semibold tracking-tight text-gray-950 group-hover:text-orange-500">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
 }
 
 Card.Description = function CardDescription({ children }) {
-  return <p className="relative z-10 mt-2 text-sm text-slate-400">{children}</p>
+  return <p className="relative z-10 mt-2 text-sm text-gray-950">{children}</p>
 }
 
 Card.Cta = function CardCta({ children }) {
@@ -58,35 +45,21 @@ Card.Cta = function CardCta({ children }) {
       className="relative z-10 mt-4 flex items-center text-sm font-medium text-orange-500"
     >
       {children}
-      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
     </div>
   )
 }
 
 Card.Eyebrow = function CardEyebrow({
   as: Component = 'p',
-  decorate = false,
   className,
   children,
   ...props
 }) {
   return (
     <Component
-      className={clsx(
-        className,
-        'relative z-10 order-first mb-3 flex items-center font-mono text-sm uppercase text-slate-400',
-        decorate && 'pl-3.5'
-      )}
+      className="relative z-10 order-first mb-3 flex items-center font-sans text-sm uppercase text-gray-950"
       {...props}
     >
-      {decorate && (
-        <span
-          className="absolute inset-y-0 left-0 flex items-center"
-          aria-hidden="true"
-        >
-          <span className="h-4 w-0.5 rounded-full bg-slate-400" />
-        </span>
-      )}
       {children}
     </Component>
   )
