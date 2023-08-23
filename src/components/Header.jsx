@@ -117,7 +117,7 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-0 top-0 z-50 origin-top bg-gray-950 p-8 font-sans uppercase"
+            className="fixed inset-x-0 top-0 z-50 h-screen origin-top bg-gray-950 p-8 font-sans uppercase"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
