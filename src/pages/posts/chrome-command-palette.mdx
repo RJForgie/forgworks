@@ -1,0 +1,19 @@
+import { PostLayout } from '@/components/PostLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Ryan Forgie',
+  date: '2023-08-31',
+  title: 'Chrome DevTools Command Menu',
+  description: 'Access Chrome DevTools commands from a searchable menu',
+}
+
+export default (props) => <PostLayout meta={meta} {...props} />
+
+Earlier this week I was pair programming with a colleague and showed them a quick way to take screenshots in Chrome.
+
+Instead of clicking around the UI, Chrome DevTools features can be accessed via the searchable Command Menu using <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on OSX (or <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on other platforms). This feature is similar to the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) in Visual Studio Code, my go-to for all the shortcuts I haven't memorised.
+
+I use this daily for quick access to the Screenshot commands; most often for sending to colleagues or illustrating Pull Requests. It is more tidy than using the tools that require dragging a box over a specific area of the screen and there is a "Capture node screenshot" command which targets the HTML element currently focused.
+
+If you begin typing "screenshot" in the Command Menu; the different versions of the command can then be selected. Details of other commands available are in the [Chrome documentation](https://developer.chrome.com/docs/devtools/command-menu/#help).
