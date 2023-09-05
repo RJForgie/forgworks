@@ -1,0 +1,28 @@
+import { PostLayout } from '@/components/PostLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Ryan Forgie',
+  date: '2023-09-05',
+  title: 'Raycast Hotkeys',
+  description: 'Fast app switching',
+}
+
+export default (props) => <PostLayout meta={meta} {...props} />
+
+Using <kbd>⌘</kbd> + <kbd>Tab</kbd> to switch between apps is slow and can break your concentration; particuarly if you have many apps open. Raycast hotkeys provide a fast way to jump to specific apps and maintain your flow.
+
+[Raycast](https://www.raycast.com/) is an alternative to the [Spotlight](https://support.apple.com/en-gb/guide/mac-help/mchlp1008/mac) or [Alfred](https://www.alfredapp.com/). It has a number of useful features but I mostly use it for launching apps and switching between them.
+
+Raycast has great [documentation](https://manual.raycast.com/command-aliases-and-hotkeys) on how to set up hotkeys so rather than replicating those instructions I'll just list my hotkeys along with the prompts I use to remember them:
+
+| App     | Hotkey                      | Memory Prompt |
+| ------- | --------------------------- | ------------- |
+| Chrome  | <kbd>⌥</kbd> + <kbd>B</kbd> | browser       |
+| VSCode  | <kbd>⌥</kbd> + <kbd>C</kbd> | code          |
+| iTerm2  | <kbd>⌥</kbd> + <kbd>T</kbd> | terminal      |
+| Inkdrop | <kbd>⌥</kbd> + <kbd>N</kbd> | notes         |
+| Slack   | <kbd>⌥</kbd> + <kbd>S</kbd> | slack         |
+| Spotify | <kbd>⌥</kbd> + <kbd>M</kbd> | music         |
+
+For other apps I use <kbd>⌘</kbd> + <kbd>Space</kbd> to launch Raycast and then type the name of the app I want to launch or focus.
